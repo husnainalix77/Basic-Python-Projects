@@ -16,7 +16,7 @@ def buyProduct():
             while(item2 not in products):
                 item2 = input('Enter your product name: ')
             amount=float(input('Enter amount in kg:'))
-            bill+=(products.get(item2,0)*amount)
+            bill+=products[item2]*amount
             cart[item2]=cart.get(item2,0)+amount
 
 ## Main Program
@@ -52,3 +52,4 @@ if(len(cart)>0):
     
         
                     
+
