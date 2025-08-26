@@ -5,8 +5,8 @@ def viewProduct():
 def add_Update_Product():
     item1 = input('Enter product name: ')
     price = int(input('Enter price of product: '))
-    products.update({item1:price})
-
+    products.update({item1:price}
+    print(products)                
 def buyProduct():
     global bill
     while(True):
@@ -52,5 +52,6 @@ if(len(cart)>0):
     
         
                     
+
 
 
