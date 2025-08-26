@@ -8,7 +8,7 @@ def add_Update_Product():
     products.update({item1:price})
 
 def buyProduct():
-    global cart,bill
+    global bill
     while(True):
             item2 = input('Enter your product name (-1 to exit): ')
             if(item2 == '-1'):
@@ -52,4 +52,5 @@ if(len(cart)>0):
     
         
                     
+
 
