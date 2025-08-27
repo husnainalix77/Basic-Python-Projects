@@ -2,7 +2,6 @@ import random
 import time
 import sys
 print('Player 2 is computer')
-
 while True:
     try:
         op = input('Do you want to play game? (yes/no): ').strip().lower()
@@ -115,6 +114,7 @@ else:
 
 # End of game
 print(f"Game Over! Final sequence: {num}")
+
 
 
 
