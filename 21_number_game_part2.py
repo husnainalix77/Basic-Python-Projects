@@ -80,7 +80,9 @@ if op == 'yes':
                 except KeyboardInterrupt:
                     print("Input cancelled. Exiting...")
                     sys.exit()
-                             
+            if num:
+                if user_pick + num[-1] > 21:
+                    user_pick = 21 - num[-1]                 
             for v in range(user_pick): 
                 last_num = num[-1] if num else 0 
                 if last_num == 21:
@@ -113,6 +115,7 @@ else:
 
 # End of game
 print(f"Game Over! Final sequence: {num}")
+
 
 
 
