@@ -83,6 +83,9 @@ if op == 'yes':
                              
             for v in range(user_pick): 
                 last_num = num[-1] if num else 0 
+                if last_num == 21:
+                    print('Limit reached')
+                    break
                 n=int(input('Enter values: '))
                 if n != last_num + 1:
                     print(f'Invalid value: {n}. Expected {last_num+1}')
@@ -110,5 +113,6 @@ else:
 
 # End of game
 print(f"Game Over! Final sequence: {num}")
+
 
 
