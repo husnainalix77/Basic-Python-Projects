@@ -92,7 +92,7 @@ if op == 'yes':
                 else:              
                     num.append(n)
                     
-            print(f'You: {num[-3:]}')
+            print(f'You: {num[-user_pick:]}')
             
             time.sleep(0.7)
             print("Order of inputs after your turn:")
@@ -110,4 +110,5 @@ else:
 
 # End of game
 print(f"Game Over! Final sequence: {num}")
+
 
