@@ -44,5 +44,7 @@ while True:
     
     # If word is completely guessed
     if "-" not in current_state:
+        print("Word : "+''.join(current_state)) 
         print("You guessed the word:", ''.join(current_state))
+
         break
