@@ -12,7 +12,7 @@ while turns < max_turns:
     guess = input(f'Guess {len(secret_num)} digit number: ')  
     
     if not guess.isdigit() or int(guess) not in range(1000, 10000):
-        print('Enter a valid 4 digit number')
+        print(f'Enter a valid {len(secret_nums)}  digit number')
         continue
     
     turns +=1
@@ -84,5 +84,6 @@ if secret_num != guess_list:
                 
         
     
+
 
 
