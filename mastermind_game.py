@@ -6,7 +6,7 @@ secret_num = list(str(num))
 guessed_digits = ['X']*len(secret_num)
 max_turns = 10
 turns = 0
-print(num)
+
 while turns < max_turns:
     count_digits = 0 ## We just want unique correct digits everytime, not previous ones
     guess = input(f'Guess {len(secret_num)} digit number: ')  
@@ -84,4 +84,5 @@ if secret_num != guess_list:
                 
         
     
+
 
