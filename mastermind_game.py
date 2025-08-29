@@ -45,7 +45,7 @@ while turns < max_turns:
         for j in range(len(guess_list)): ## Here we will add correct digits with wrong places in above list
             if guess_copy[j] is not None and guess_copy[j] in secret_copy: 
                 correct_digits.append(guess_copy[j])
-                secret_copy[secret_copy.index(guess_copy[j])] == None 
+                secret_copy[secret_copy.index(guess_copy[j])] = None 
                 
         if not (count_digits or correct_digits):
             print('None of the digits in your input match.')
@@ -84,3 +84,4 @@ if secret_num != guess_list:
                 
         
     
+
