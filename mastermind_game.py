@@ -3,11 +3,11 @@ import time
     
 num = random.randrange(1000, 10000) ## You can change this range, if you change, change in while loop too!
 secret_num = list(str(num))
-guessed_digits = ['X']*len(secret_num)
 max_turns = 10
 turns = 0
 
 while turns < max_turns:
+    guessed_digits = ['-']*len(secret_num)
     count_digits = 0 ## We just want unique correct digits everytime, not previous ones
     guess = input(f'Guess {len(secret_num)} digit number: ')  
     
@@ -24,6 +24,8 @@ while turns < max_turns:
             time.sleep(0.5)
             print(f'The number was: {num}')
         else:
+            guessed_digits = guess_list
+            print(f"Number: {''.join(guessed_digits)}")
             print(f'It took only {turns} tries to guess the number')
             print("You've become a Mastermind!")
             time.sleep(0.5)
@@ -58,7 +60,7 @@ while turns < max_turns:
                 print(f"Number: {''.join(guessed_digits)}")
                 
             if correct_digits:
-                print(f"The correct digit(s) but with wrong place(s): {','.join(correct_digits)}")
+                print(f"The correct digit(s) but with wrong place(s): {', '.join(correct_digits)}")
     print()
     time.sleep(0.7)  
              
@@ -84,6 +86,7 @@ if secret_num != guess_list:
                 
         
     
+
 
 
 
