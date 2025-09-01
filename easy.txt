@@ -1,0 +1,10 @@
+What is 2+2?	a) 3	b) 4	c) 5	d) 6	b
+Which planet is closest to the Sun?	a) Venus	b) Earth	c) Mercury	d) Mars	c
+What is the capital of Pakistan?	a) Lahore	b) Islamabad	c) Karachi	d) Peshawar	b
+How many days are there in a week?	a) 5	b) 6	c) 7	d) 8	c
+Which animal is known as the King of the Jungle?	a) Tiger	b) Lion	c) Elephant	d) Leopard	b
+What is the capital of France?	a) Berlin	b) Paris	c) Rome	d) Madrid	b
+How many colors are there in a rainbow?	a) 5	b) 6	c) 7	d) 8	c
+Which shape has 3 sides?	a) Triangle	b) Square	c) Circle	d) Pentagon	a
+
+
