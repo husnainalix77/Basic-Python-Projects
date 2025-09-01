@@ -1,0 +1,9 @@
+What is the derivative of e^x?	a) x*e^(x-1)	b) e^x	c) ln(x)	d) 1/x	b
+Who proposed the laws of planetary motion?	a) Newton	b) Galileo	c) Kepler	d) Einstein	c
+Which element has the atomic number 26?	a) Iron	b) Copper	c) Nickel	d) Zinc	a
+Who is known as the father of modern physics?	a) Isaac Newton	b) Galileo Galilei	c) Albert Einstein	d) Niels Bohr	c
+In which year did World War II end?	a) 1940	b) 1942	c) 1945	d) 1948	c
+What is the hardest natural substance on Earth?	a) Diamond	b) Graphite	c) Quartz	d) Corundum	a
+Which organelle is known as the powerhouse of the cell?	a) Chloroplast	b) Ribosome	c) Mitochondria	d) Nucleus	c
+Which element has the highest melting point?	a) Tungsten	b) Iron	c) Platinum	d) Carbon	a
+
