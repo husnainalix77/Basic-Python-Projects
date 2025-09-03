@@ -120,16 +120,17 @@ def moveDown(grid):
         return True
     
 def checkWin(grid):
-    'Checks Winning Possibility After Every Move'
-    row_col = len(grid) - 1 ## Last row, last column
-    if grid[row_col][row_col] != '-':
-        return False     
-    for r in grid:
-        row = [i for i in r if i != '-']
-        for j in range(len(row)-1):
-            if row[j]+1 != row[j+1]:
-                return False
-    return True        
+    # Flatten the 2D grid into a 1D list
+    flat = [cell for row in grid for cell in row]
+
+    # Check two conditions:
+    # 1. All numbers before the last cell should be in ascending order from 1 to n^2 - 1
+    # 2. The last cell should be the empty space ('-')
+    if flat[:-1] == list(range(1, len(flat))) and flat[-1] == '-':
+        return True
+    
+    # If either condition fails, puzzle is not solved
+    return False        
           
 ## Main Program
 if __name__=='__main__':   
@@ -174,5 +175,6 @@ if __name__=='__main__':
             print("Game finished on:", now.strftime("%Y-%m-%d %H:%M:%S"))
             break            
         updateDisplay(grid)    
+
 
         
