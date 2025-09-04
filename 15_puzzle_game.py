@@ -23,15 +23,15 @@ def setUpGrid(n):
         # Find blank row from bottom (1-based)
         blank_tile = tiles.index('-')
         row_from_top = blank_tile // n
-        blank_row_from_bottom = n - row_from_top  # 1-indexed from bottom
+        blank_row_from_bottom = n - row_from_top  # 1 based index
         
         if n % 2 == 1:
             # Odd n: solvable iff inversions are even
             if inversions % 2 == 0:
                 break
         else:
-            # Even n: depends on blank row from bottom
-            if (blank_row_from_bottom % 2 == 1 and inversions % 2 == 0) or (blank_row_from_bottom % 2 == 0 and inversions % 2 == 1):
+            # Even n: sum of blank rom from bottom and inversions should be odd (if we follow rule for n-->even)
+            if (blank_row_from_bottom + inversions) % 2 == 1:
                 break
     # Convert to 2D
     grid = [tiles[i:i+n] for i in range(0, n*n, n)]
@@ -178,3 +178,4 @@ if __name__=='__main__':
 
 
         
+
