@@ -104,7 +104,7 @@ def getBestMoveSimple(grid, ai_mark='Y', human_mark='R'):
     # 4. Left/Right from center
     for offset in range(1, cols//2 + 1):
         for col in [center - offset, center + offset]:
-            if 0 <= col < cols and '-' in getColumn(grid, col):
+            if '-' in getColumn(grid, col):
                 return col
     # 5. Fallback random
     valid_cols = [c for c in range(cols) if '-' in getColumn(grid, c)]
@@ -174,3 +174,4 @@ if __name__=='__main__':
         else:
             print('Ok, next time.')
             break
+
