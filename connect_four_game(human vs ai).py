@@ -4,7 +4,7 @@ import random
 import time
 import os
 import platform
-import copy
+
 
 def dispGrid(grid):
     """Display the game grid in a nice Unicode box format."""
@@ -88,7 +88,7 @@ def simulateMoveOn(grid, col, mark):
     Simulate placing `mark` in column `col` on a copy of `grid`.
     Returns new grid, or None if the column is full.
     """
-    new_grid = copy.deepcopy(grid)
+    new_grid = [row[:] for row in grid]
     n = len(new_grid) - 1
     col_data = getColumn(new_grid, col)
     for r, data in enumerate(col_data[::-1]):  # bottom-up
@@ -218,3 +218,4 @@ if __name__ == '__main__':
         else:
             print('Ok, maybe next time.')
             break
+
