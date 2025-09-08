@@ -8,9 +8,17 @@ def setUpGrid(n):
     return new_grid
     
 def dispGrid(grid):
-    'Displays the grid after each move'
-    for row in grid:
-        print(row)
+    'Displays the grid in Unicode box format with aligned numbers (zeros visible)'
+    n = len(grid)
+    cell_width = 5 
+    print('╔' + '╦'.join(['═' * cell_width] * n) + '╗')
+    for i, row in enumerate(grid):
+        row_str = '║' + '║'.join(f"{num:^{cell_width}}" for num in row) + '║'
+        print(row_str)
+        if i != n - 1:
+            print('╠' + '╬'.join(['═' * cell_width] * n) + '╣')
+        else:
+            print('╚' + '╩'.join(['═' * cell_width] * n) + '╝')
         
 def showCommands():
     'Shows commands to user'
@@ -183,7 +191,7 @@ def playGame(n):
       
 ## Main Program   
 if __name__ == '__main__':  
-    n=4   ## Size of grid i.e., 4x4
+    n = 4   ## Size of grid i.e., 4x4
     playGame(n) 
     
                 
@@ -192,4 +200,5 @@ if __name__ == '__main__':
 
 
         
+
     
