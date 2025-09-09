@@ -195,6 +195,16 @@ class Reversi:
                     elif grid[r][c] == human_mark:
                         score -= 20
         return score
+        
+    def getAdaptiveDepth(self):
+        'Adjust depth dynamically based on remaining empty squares'
+        empty = sum(row.count('-') for row in self.grid)
+        if empty > 40:     # Opening phase
+            return 4
+        elif empty > 20:   # Midgame
+            return 5
+        else:              # Endgame
+            return 6    
 
     def simulateMove(self, move, mark, grid):
         'Simulates the specific move and updates grid'
@@ -228,8 +238,11 @@ class Reversi:
                     break  # Alpha Pruning
             return minEval
 
-    def getBestMove(self, AI_mark, depth=3):
+    def getBestMove(self, AI_mark):
         'Gives AI Best Move'
+        depth = self.getAdaptiveDepth()
+        if depth == 6:
+            print("Computer is thinking deeper (endgame)... Please wait.")
         best_score = float('-inf')
         best_move = None
         alpha = float('-inf') ## Lower bound
@@ -281,7 +294,7 @@ class Reversi:
             else:  # AI
                 if valid_moves:
                     self.dispGrid(mark)
-                    computer_move = self.getBestMove(mark, depth=3)
+                    computer_move = self.getBestMove(mark)
                     self.isValidMove(computer_move, mark)
                     print(f"{current_player}({mark}) plays: {computer_move}")
                 else:
@@ -301,4 +314,5 @@ class Reversi:
 if __name__ == '__main__':
     N = 8
     game = Reversi(N)
+
     game.playGame()
